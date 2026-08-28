@@ -16,6 +16,15 @@ represented on this card.
   letterforms. Their logo, built true; not a redesign.
 - **Layout:** medallion — full-bleed photo banner, seal in a white disc
   straddling the lower edge. The same disc repeats in the QR centre.
+- **Hero** is `MLG - Christian and Angelica.png` (client-supplied, 2026-08-27),
+  cropped 95 px off the left edge because the source has a **cut-off MLG badge**
+  bleeding off the top-left corner (measured: x 0–83, y 32–190). The card already
+  carries the full seal in the medallion, so the partial one is dropped, not kept.
+  Frame is 1272×978 (1.30) to keep the suit and blazer in shot.
+- **Saved-contact photo** is the circular `MLG - Headshots.png`, flattened onto
+  white (the PNG corners are transparent) and embedded in the vCard at 800×800.
+  Phones mask contact photos to a circle, so the corners never show; on any app
+  that renders square it reads as a white-background studio portrait.
 - **Type:** Playfair Display for the name (matches the serif on their printed
   card); Montserrat for UI.
 - **Card standard:** one button only, opens the QR. No `saveContact()`,
@@ -29,8 +38,6 @@ represented on this card.
 
 ## Open items
 
-- `hero.jpg` is upscaled from a low-resolution screenshot of their printed
-  card. **Replace with the original photo file** when available.
 - CA licence number not printed — could not be read cleanly from the source
   image and was not guessed. Add once confirmed.
 - Social links and a booking link are pending Christian's answer.
