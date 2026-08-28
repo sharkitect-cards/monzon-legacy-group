@@ -23,6 +23,10 @@ represented on this card.
 - **QR:** rounded modules, deep-green vertical gradient `#0E2016` to `#224F33`,
   seal disc at 22.5% width, ECC-H. Decode-verified at 100 / 50 / 25 / 15 % scale.
 
+- **Website link is the personal agent page**, not the root domain:
+  `https://www.theiln.agency/inez-angelica-monzon` (client-specified, 2026-08-27).
+  Do NOT "simplify" it to ilnagency.com — that drops his page.
+
 ## Open items
 
 - `hero.jpg` is upscaled from a low-resolution screenshot of their printed
