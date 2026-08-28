@@ -1,0 +1,11 @@
+{
+  "name": "Christian & Angelica Monzon — Monzon Legacy Group",
+  "short_name": "My Card",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#12291D",
+  "theme_color": "#12291D",
+  "icons": [
+    { "src": "logo.png", "sizes": "1200x1200", "type": "image/png", "purpose": "any" }
+  ]
+}

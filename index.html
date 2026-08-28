@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Christian &amp; Angelica Monzon &mdash; Monzon Legacy Group</title>
+<meta name="description" content="Christian &amp; Angelica Monzon, Monzon Legacy Group. Life insurance, annuities, retirement and estate strategies.">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My Card">
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#12291D">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root{
+  /* green measured from their printed card: #12291D */
+  --bg:#12291D;
+  --bg-2:#17331F;
+  --gold:#C9A24A;
+  --gold-lt:#E8CE8F;
+  --gold-grad:linear-gradient(100deg,#C9A24A 0%,#E8CE8F 100%);
+  --ink:#0B1A12;
+  --text-primary:#FFFFFF;
+  --text-secondary:#CBD8CF;
+  --text-muted:#8C9C91;
+  --hairline:rgba(255,255,255,0.10);
+}
+
+body{
+  font-family:'Montserrat',Arial,sans-serif;
+  background-color:var(--bg);
+  color:var(--text-primary);
+  min-height:100vh;
+  display:flex; align-items:center; justify-content:center;
+  padding:20px; position:relative; overflow-x:hidden;
+}
+body::before{
+  content:''; position:fixed; inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.016) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.016) 1px,transparent 1px);
+  background-size:40px 40px; pointer-events:none; z-index:0;
+}
+
+.card{
+  position:relative; z-index:1;
+  max-width:420px; width:100%;
+  background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%);
+  border:1px solid var(--hairline);
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.55);
+  overflow:hidden;
+}
+
+/* one restrained brand cue on the top edge */
+.card::before{
+  content:''; position:absolute; top:0; left:50%;
+  transform:translateX(-50%);
+  width:58%; height:2px;
+  background:var(--gold-grad);
+  border-radius:2px; z-index:3;
+}
+
+/* ---- hero + medallion ---- */
+.hero{ position:relative; width:100%; aspect-ratio:1000/634; overflow:hidden; }
+.hero img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; }
+.hero::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(18,41,29,0) 45%,rgba(18,41,29,0.88) 100%);
+}
+
+.medallion{
+  position:relative; z-index:2;
+  width:120px; height:120px;
+  margin:-60px auto 0;
+  border-radius:50%;
+  background:#FFFFFF;
+  box-shadow:0 6px 22px rgba(0,0,0,0.45);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.medallion img{ width:88%; height:88%; object-fit:contain; }
+
+.body{ padding:18px 32px 34px; }
+
+.name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-weight:600; font-size:25px; line-height:1.22;
+  color:var(--text-primary); margin-bottom:8px;
+}
+.title{
+  font-size:12.5px; font-weight:400;
+  color:var(--text-muted); margin-bottom:6px;
+}
+.company{
+  font-weight:500; font-size:12px;
+  color:var(--text-secondary);
+  letter-spacing:2px; text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.divider{ display:flex; align-items:center; justify-content:center; gap:12px; margin:0 auto 18px; width:190px; }
+.divider::before,.divider::after{ content:''; flex:1; height:1px; background:var(--hairline); }
+.mark{ width:18px; height:18px; flex-shrink:0; }
+
+.tagline{
+  font-family:'Playfair Display',Georgia,serif;
+  font-style:italic; font-size:15px;
+  color:var(--gold-lt); margin-bottom:12px;
+}
+.bio{
+  font-size:12.5px; line-height:1.7; font-weight:300;
+  color:var(--text-secondary); margin-bottom:24px;
+}
+.bio .org{ color:var(--text-muted); font-size:11.5px; }
+
+.contact-links{ display:flex; flex-direction:column; gap:12px; margin-bottom:22px; }
+.contact-link{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--hairline);
+  border-radius:8px;
+  color:var(--text-primary); text-decoration:none;
+  font-size:14px; font-weight:400;
+  transition:all .2s ease; text-align:left;
+}
+.contact-link:hover{ background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.22); }
+.contact-link svg{ width:18px; height:18px; flex-shrink:0; fill:var(--text-secondary); }
+.contact-link span{ color:var(--text-secondary); word-break:break-word; }
+.contact-link.email span{ font-size:12.5px; }
+
+/* SINGLE action: opens the QR. No .vcf anchor, no saveContact() - card standard. */
+.save-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; padding:16px 24px;
+  border:none; border-radius:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:15px; font-weight:600; letter-spacing:.5px;
+  cursor:pointer;
+  background:var(--gold-grad);
+  color:var(--ink);
+  transition:all .2s ease; margin-bottom:22px;
+}
+.save-btn:hover{ filter:brightness(1.06); transform:translateY(-1px); box-shadow:0 6px 24px rgba(201,162,74,.28); }
+.save-btn:active{ transform:translateY(0); }
+.save-btn svg{ width:19px; height:19px; fill:var(--ink); }
+
+.qr-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.9); z-index:100; align-items:center; justify-content:center; padding:20px; }
+.qr-overlay.active{ display:flex; }
+.qr-modal{ background:#173321; border:1px solid var(--hairline); border-radius:18px; padding:28px; text-align:center; max-width:340px; width:100%; }
+.qr-modal h3{ font-family:'Playfair Display',Georgia,serif; font-size:15px; letter-spacing:1px; margin-bottom:6px; color:var(--text-primary); }
+.qr-modal p{ font-size:12px; color:var(--text-muted); margin-bottom:18px; }
+.qr-frame{ background:#FFF; border-radius:14px; padding:10px; margin:0 auto 18px; width:250px; }
+.qr-frame img{ width:100%; height:auto; display:block; }
+.qr-close{ background:none; border:1px solid rgba(255,255,255,.18); color:var(--text-secondary); padding:10px 26px; border-radius:8px; font-family:'Montserrat',sans-serif; font-size:13px; cursor:pointer; transition:all .2s ease; }
+.qr-close:hover{ border-color:rgba(255,255,255,.4); color:var(--text-primary); }
+
+.footer{ font-size:11px; color:var(--text-muted); }
+.footer a{ color:var(--text-secondary); text-decoration:none; }
+
+@media (max-width:480px){
+  .body{ padding:16px 24px 30px; }
+  .name{ font-size:22px; }
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="hero"><img src="hero.jpg" alt="Christian and Angelica Monzon"></div>
+
+  <div class="medallion"><img src="logo.png" alt="Monzon Legacy Group"></div>
+
+  <div class="body">
+    <div class="name">Christian &amp; Angelica Monzon</div>
+    <div class="title">Executive Partner</div>
+    <div class="company">Monzon Legacy Group</div>
+
+    <div class="divider">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10.2" fill="none" stroke="#C9A24A" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="6.6" fill="none" stroke="#C9A24A" stroke-width="0.9"/>
+      </svg>
+    </div>
+
+    <div class="tagline">Protect what you love most.</div>
+
+    <div class="bio">
+      Life Insurance &bull; Annuities &bull; Retirement &bull; Estate Strategies<br>
+      <span class="org">Impact Leadership Network</span>
+    </div>
+
+    <div class="contact-links">
+      <a href="tel:+14089120869" class="contact-link">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>(408) 912-0869</span>
+      </a>
+      <a href="mailto:InezAngelica.Monzon@ilnagency.com" class="contact-link email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span>InezAngelica.Monzon@ilnagency.com</span>
+      </a>
+      <a href="https://www.ilnagency.com" target="_blank" rel="noopener" class="contact-link">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-3.02c-.11-1.86-.48-3.58-1.05-5.03A8.014 8.014 0 0 1 19.93 11zM12 4.04c.83 1.2 1.48 3.19 1.77 5.96h-3.54c.29-2.77.94-4.76 1.77-5.96zM4.26 14c-.16-.64-.26-1.31-.26-2s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.81 2h3.02c.11 1.86.48 3.58 1.05 5.03A7.987 7.987 0 0 1 5.07 16zm3.02-8H5.07a7.987 7.987 0 0 1 4.07-5.03C8.57 4.42 8.2 6.14 8.09 8zM12 19.96c-.83-1.2-1.48-3.19-1.77-5.96h3.54c-.29 2.77-.94 4.76-1.77 5.96zM10.23 12c-.09-.66-.15-1.32-.15-2s.06-1.34.15-2h3.54c.09.66.15 1.32.15 2s-.06 1.34-.15 2h-3.54zm4.32 6.97c.57-1.45.94-3.17 1.05-5.03h3.02a8.014 8.014 0 0 1-4.07 5.03zM15.6 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2H15.6z"/></svg>
+        <span>ilnagency.com</span>
+      </a>
+    </div>
+
+    <button class="save-btn" onclick="toggleQR()">
+      <svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v3h-3v2h3v3h2v-3h3v-2h-3v-3zm-3 8v-2h-2v2h2zm4 0v-2h-2v2h2z"/></svg>
+      Save My Contact
+    </button>
+
+    <div class="footer">Powered by <a href="https://www.sharkitectdigital.com" target="_blank" rel="noopener">Sharkitect</a></div>
+  </div>
+</div>
+
+<div class="qr-overlay" id="qrOverlay" onclick="toggleQR()">
+  <div class="qr-modal" onclick="event.stopPropagation()">
+    <h3>Scan to Save</h3>
+    <p>Point your camera at the code</p>
+    <div class="qr-frame"><img src="qr-code.png" alt="Scan to save the Monzons' contact"></div>
+    <button class="qr-close" onclick="toggleQR()">Close</button>
+  </div>
+</div>
+
+<script>
+function toggleQR(){ document.getElementById('qrOverlay').classList.toggle('active'); }
+</script>
+</body>
+</html>
