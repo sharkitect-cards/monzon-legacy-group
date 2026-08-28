@@ -36,7 +36,8 @@ represented on this card.
   `https://www.theiln.agency/inez-angelica-monzon` (client-specified, 2026-08-27).
   Do NOT "simplify" it to ilnagency.com — that drops his page.
 
-- **Tagline provenance:** "Protect who you love most." is OURS, not theirs.
+- **Tagline provenance:** "Protect who you love. Build what lasts." is OURS,
+  not theirs.
   Their site has the phrase inside a sentence — "Providing you the guidance
   through life's most important choices, so you can protect what you love most."
   — as body copy, once, never as a tagline; their printed card has no tagline at
