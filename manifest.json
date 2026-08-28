@@ -1,6 +1,7 @@
 {
   "name": "Christian & Angelica Monzon — Monzon Legacy Group",
-  "short_name": "My Card",
+  "short_name": "Monzon",
+  "description": "Life insurance, annuities, retirement & estate planning — Impact Leadership Network.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#12291D",
