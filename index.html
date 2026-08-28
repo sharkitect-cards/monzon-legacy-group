@@ -138,11 +138,8 @@ body::before{
 .contact-link:hover{ background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.22); }
 .contact-link svg{ width:18px; height:18px; flex-shrink:0; fill:var(--text-secondary); }
 .contact-link span{ color:var(--text-secondary); word-break:break-word; }
-.contact-link.email span,
-.contact-link.web span{ font-size:11.5px; letter-spacing:-0.2px;
-  /* only break at the <wbr> we placed, never mid-token */
-  word-break:normal; overflow-wrap:break-word; }
-/* keep the URL path whole so the break lands on the slash, not a hyphen */
+/* all three rows read as labels, so they share the 14px base size */
+/* keeps multi-word terms whole (services line) */
 .nb{ white-space:nowrap; }
 
 /* SINGLE action: opens the QR. No .vcf anchor, no saveContact() - card standard. */
@@ -211,13 +208,15 @@ body::before{
         <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         <span>(408) 912-0869</span>
       </a>
-      <a href="mailto:InezAngelica.Monzon@ilnagency.com" class="contact-link email">
+      <a href="mailto:InezAngelica.Monzon@ilnagency.com" class="contact-link email"
+         title="InezAngelica.Monzon@ilnagency.com">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <span>InezAngelica.Monzon@<wbr>ilnagency.com</span>
+        <span>Email Us</span>
       </a>
-      <a href="https://www.theiln.agency/inez-angelica-monzon" target="_blank" rel="noopener" class="contact-link web">
+      <a href="https://www.theiln.agency/inez-angelica-monzon" target="_blank" rel="noopener" class="contact-link web"
+         title="theiln.agency/inez-angelica-monzon">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-3.02c-.11-1.86-.48-3.58-1.05-5.03A8.014 8.014 0 0 1 19.93 11zM12 4.04c.83 1.2 1.48 3.19 1.77 5.96h-3.54c.29-2.77.94-4.76 1.77-5.96zM4.26 14c-.16-.64-.26-1.31-.26-2s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.81 2h3.02c.11 1.86.48 3.58 1.05 5.03A7.987 7.987 0 0 1 5.07 16zm3.02-8H5.07a7.987 7.987 0 0 1 4.07-5.03C8.57 4.42 8.2 6.14 8.09 8zM12 19.96c-.83-1.2-1.48-3.19-1.77-5.96h3.54c-.29 2.77-.94 4.76-1.77 5.96zM10.23 12c-.09-.66-.15-1.32-.15-2s.06-1.34.15-2h3.54c.09.66.15 1.32.15 2s-.06 1.34-.15 2h-3.54zm4.32 6.97c.57-1.45.94-3.17 1.05-5.03h3.02a8.014 8.014 0 0 1-4.07 5.03zM15.6 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2H15.6z"/></svg>
-        <span>theiln.agency/<wbr><span class="nb">inez-angelica-monzon</span></span>
+        <span>Visit Our Website</span>
       </a>
     </div>
 
